@@ -1,4 +1,4 @@
-package com.demoqa;
+package guru.qa.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
@@ -14,27 +14,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 /**
- AutomationPractice second test
+ AutomationPractice
  */
-public class TestPracticeForm {
-
-    @BeforeAll
-    static void settings() {
-        System.setProperty("webdriver.chrome.driver","src/tools/chromedriver.exe");
-        Configuration.browserSize = "1440x900";
-    }
-
-    @BeforeEach
-    void openBrowser() {
-        //Открываем браузер
-        open("https://demoqa.com/automation-practice-form");
-    }
-
-    @AfterEach
-    void closeBrowser(){
-        //После каждого теста закрываем веб-дайвер
-        closeWebDriver();
-    }
+public class TestPracticeForm extends TestBase {
 
     @Test
     void testStudentRegistrationForm(){
